@@ -1,6 +1,7 @@
 import { renderItems } from "../components/renderItem.js";
 import { generateFooter } from "../components/Footer.js";
 import { generateHeader } from "../components/header.js";
+import { subHeader } from "../components/subHeader.js";
 import { Nav } from "../components/Nav.js";
 import data from "../data/dataset.js";
 
@@ -13,9 +14,11 @@ export const home = () => {
   const nav = Nav();
   homeView.appendChild(nav);
 
-  // Obtén tu data desde algún lugar (puedes importarla o traerla de una API)
-  const data2 = [...data]; // Reemplaza con tu data
-  const cardsList = renderItems(data2);
+  const main = subHeader();
+  homeView.appendChild(main);
+
+  const dataCards = [...data]; // "Operador de propagación" copia de la data
+  const cardsList = renderItems(dataCards);
 
   // Crea un contenedor para la lista de tarjetas y agrégalo al contenedor principal
   const cardsContainer = document.createElement("div");

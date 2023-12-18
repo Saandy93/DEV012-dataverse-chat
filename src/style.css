@@ -104,7 +104,7 @@ button {
   cursor: pointer;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center;
   margin-top: 6vh;
@@ -112,6 +112,7 @@ footer {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   opacity: 0.8;
+  font-style: italic;
 }
 
 .Cards {
@@ -128,6 +129,3 @@ footer {
   box-sizing: content-box;
 }
 
-footer {
-  font-style: italic;
-}

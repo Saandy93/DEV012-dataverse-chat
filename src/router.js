@@ -5,7 +5,7 @@ let ROUTES = {};
 let rootElement = "";
 
 export const setrootElement = (newRootElementValue) => {
-rootElement = newRootElementValue;
+  rootElement = newRootElementValue;
   // validar que newRootElementValue es un objeto html
 };
 
@@ -13,7 +13,7 @@ export const setRoutes = (newRoutesValue) => {
   // optional Throw errors if routes isn't an object
   // optional Throw errors if routes doesn't define an /error route
   if (typeof newRoutesValue === "object") {
-    if (newRoutesValue['/error']) {
+    if (newRoutesValue["/error"]) {
       ROUTES = newRoutesValue;
     }
   }
@@ -23,21 +23,21 @@ export const setRoutes = (newRoutesValue) => {
 export const renderView = (pathname, props = {}) => {
   // clear the root element
   const root = rootElement;
-  root.innerHTML = '';
+  root.innerHTML = "";
   // find the correct view in ROUTES for the pathname
   //revisar 0:20:35 de video
   if (ROUTES[pathname]) {
     const template = ROUTES[pathname]();
     root.appendChild(template);
   } else {
-    root.appendChild (ROUTES['/error']());
+    root.appendChild(ROUTES["/error"]());
   }
   // in case not found render the error view
   // render the correct view passing the value of props
   // add the view element to the DOM root element
 };
 
-// guarda el historial de navegacion 
+// guarda el historial de navegacion
 
 export const navigateTo = (pathname, props = {}) => {
   // update window history with pushState

@@ -3,7 +3,7 @@ import { error } from "./views/Error_429_rochi.js";
 import { error404 } from "./views/Error_404_androide.js";
 import { setRoutes, setrootElement, onURLChange } from "./router.js";
 
-//index el el unico que tiene contacto directo con nuestro html 
+//index el el unico que tiene contacto directo con nuestro html
 
 //lo primero es traer los componentes(como sale arriba), creando las rutas (pathname)
 const routes = {
@@ -18,15 +18,10 @@ setRoutes(routes);
 setrootElement(viewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  console.log ("DOM fully loaded and parsed")
-  console.log(event.target.location.pathname);
-    onURLChange(event.target.location.pathname);
-  });
-  
- window.onpopstate=onURLChange;
+  onURLChange(event.target.location.pathname);
+});
 
-
-
+window.onpopstate = onURLChange;
 
 /*
 TODO:
@@ -34,21 +29,3 @@ TODO:
 2.- Pasar "root element" a router.
 3.- Invocar el router para renderizar la vista correcta.
 */
-
-/*import Home from "./views/Home";
-// ... import other views
-import { setRootEl, setRoutes, onURLChange } from "./router.js";
-
-// Define your routes and their associated views
-const routess = {
-  "/": Home,
-  // ...
-};
-
-// Assign the routes
-setRoutes(routess);
-
-// Set the root element where views will be rendered
-window.addEventListener("DOMContentLoaded", () => {
-  setRootEl(/* root element */ 
-//}); 

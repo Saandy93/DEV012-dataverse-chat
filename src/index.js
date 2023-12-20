@@ -1,6 +1,7 @@
 import { home } from "./views/Home.js";
 import { error } from "./views/Error_429_rochi.js";
 import { error404 } from "./views/Error_404_androide.js";
+import { characterDetails } from "./views/BookDetail.js";
 import { setRoutes, setrootElement, onURLChange } from "./router.js";
 
 //index el el unico que tiene contacto directo con nuestro html
@@ -10,6 +11,7 @@ const routes = {
   "/": home,
   "/error": error,
   "/error2": error404,
+  "/CharacterDetails": characterDetails,
 };
 
 const viewContainer = document.getElementById("root");

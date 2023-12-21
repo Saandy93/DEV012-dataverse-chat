@@ -1,5 +1,5 @@
 import { home } from "./views/Home.js";
-import { error } from "./views/Error_429_rochi.js";
+import { error } from "./views/Error_429_marieCurie.js";
 import { error404 } from "./views/Error_404_adaLovelace.js";
 import { characterDetails } from "./views/characterDetail.js";
 import { setRoutes, setrootElement, onURLChange } from "./router.js";

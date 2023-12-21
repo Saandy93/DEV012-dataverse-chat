@@ -129,3 +129,72 @@ button {
   box-sizing: content-box;
 }
 
+.error-message {
+  color: #ff6207;
+}
+
+.title-style {
+  font-size: 25px;
+}
+
+.paragraph-style {
+  font-size: 25px;
+  height: 250px;
+  width: 500px;
+}
+
+.container-style {
+  display: flex;
+  align-items: center;
+}
+
+.image-container-style-404 {
+  background-image: url("./images/ada-lovelace.jpg");
+  background-size: cover;
+  width: 1000px;
+  height: 781px;
+}
+
+.mirror-effect {
+  transform: scaleX(-1);
+}
+
+.text-container-style-404 {
+  width: 781px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f5f7;
+  border-radius: 70px;
+}
+
+.image-container-style-429 {
+  background-image: url("./images/marie-curie.jpg");
+  background-size: cover;
+  width: 1000px;
+  height: 781px;
+}
+
+.text-container-style-429{
+  width: 781px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f5f7;
+  border-radius: 70px;
+
+}
+
+.name{
+display: flex;
+justify-content: center;
+}
+
+ #image{
+display: flex;
+justify-content: center;
+ }

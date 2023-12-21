@@ -1,7 +1,7 @@
 import { home } from "./views/Home.js";
 import { error } from "./views/Error_429_rochi.js";
-import { error404 } from "./views/Error_404_androide.js";
-import { characterDetails } from "./views/BookDetail.js";
+import { error404 } from "./views/Error_404_adaLovelace.js";
+import { characterDetails } from "./views/characterDetail.js";
 import { setRoutes, setrootElement, onURLChange } from "./router.js";
 
 //index el el unico que tiene contacto directo con nuestro html

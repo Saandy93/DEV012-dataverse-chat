@@ -1,8 +1,11 @@
 import { generateHeader } from "../components/header.js";
 import { generateFooter } from "../components/Footer.js";
 
-export const characterDetails = () => {
+export const characterDetails = (character) => {
+console.log(character);
+
     const Details = document.createElement('div');
+   Details.setAttribute("id","detailsContainer");
 
     const header = generateHeader();
     Details.appendChild(header);
@@ -17,19 +20,23 @@ export const characterDetails = () => {
     image.className = "imgDetails"; // Agrega una clase para aplicar estilos desde CSS
     imgContainer.appendChild(image);
 
-    /*const textContainer = document.createElement('div');
-    textContainer.setAttribute("id","text");
-    const text = document.createElement('p');
-    text.textContent("Nombre:")
-    textContainer.appendChild(text)*/
+
+    const characterInfo = document.createElement('div');
+    characterInfo.setAttribute("id","text");
+    const characterName = document.createElement('h2');
+    characterName.textContent = 'Nombre:';
+    const characterDescription = document.createElement('h2');
+    characterDescription.textContent ='Descripción:';
+    characterName.className = "name";
+    characterDescription.className = "info";
+    characterInfo.appendChild(characterName);
+    characterInfo.appendChild(characterDescription);
 
     Details.appendChild(imgContainer);
-    //Details.appendChild(textContainer);
+    Details.appendChild(characterInfo);
 
-    const characterName = document.createElement('h2');
-    characterName.textContent = 'Nombre';
-    characterName.className = "name";
-    Details.appendChild(characterName);
+    const footerContainer = document.createElement('div');
+    footerContainer.setAttribute("id","footer");
 
     const footer = generateFooter();
     Details.appendChild(footer);

@@ -1,5 +1,5 @@
 export const generateFooter = () => {
-  const footer = document.createElement('p');
+  const footer = document.createElement('footer');
   footer.textContent = "Desarrollado por: Sandy Funes | github.com/Saandy93";
   footer.className = "footer"; //Clase para dar estilos en CSS
 

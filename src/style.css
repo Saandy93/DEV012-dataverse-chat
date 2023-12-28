@@ -189,12 +189,22 @@ button {
 
 }
 
-.name{
-display: flex;
-justify-content: center;
+#detailsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
+
 
  #image{
 display: flex;
 justify-content: center;
+ }
+
+ #text{
+justify-content: center;
+border: 2px solid rgba(248, 248, 250, 0.813);
+width: 600px;
+height: 400px;
  }

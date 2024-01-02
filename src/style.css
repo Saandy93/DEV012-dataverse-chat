@@ -15,9 +15,9 @@ img {
 
 h1 {
   font-size: xx-large;
-  background-color: ghostwhite;
-  padding: 4vh;
-  border-radius: 10vh;
+  background-color: #f8d8fc;
+  padding: 20px;
+  border-radius: 20px;
   opacity: 0.9;
 }
 
@@ -169,10 +169,13 @@ button {
 
 .image-container-style-429 {
   background-image: url("./images/marie_curie_Error.jpeg");
-  background-size: cover;
-  width: 800px;
-  height: 781px;
+  background-size: contain;
+  width: 550px;
+  height: 500px;
   border-radius: 20px;
+  margin-left: 80px;
+    margin-top: 80px;
+    box-shadow: 4px 4px 8px rgb(1, 5, 8);
 }
 
 .text-container-style-429 {
@@ -181,13 +184,16 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*justify-content: center;*/
-  background-color: #f8d8fc;
-  border-radius: 70px;
+  background-color: whitesmoke;
+  border: 3px solid #f8d8fc;
+  border-radius: 30px;
   opacity: 0.9;
-  margin-left: 50px;
+  margin-left: 80px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-shadow: 4px 4px 8px rgba(115, 11, 200, 0.26);
 }
-.imgDetails{
+.imgDetails {
   width: 450px;
   height: 430px;
   border-radius: 5px;

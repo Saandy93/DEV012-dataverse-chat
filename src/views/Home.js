@@ -3,6 +3,7 @@ import { generateFooter } from "../components/Footer.js";
 import { generateHeader } from "../components/header.js";
 import { subHeader } from "../components/subHeader.js";
 import { Nav } from "../components/Nav.js";
+//import { characterDetails } from "./characterDetail.js";
 import { filterData, sortData } from "../lib/dataFunctions.js";
 import data from "../data/dataset.js";
 
@@ -30,24 +31,45 @@ export const home = () => {
   const cardsList = renderItems(dataCards);
   cardsContainer.appendChild(cardsList);
 
+  let dataFiltrada;
   const selectFiltro = homeView.querySelector('select[name="filtro"]');
   selectFiltro.addEventListener("change", (event) => {
-    const dataFiltrada = filterData(dataCards, "mainField", event.target.value);
+   dataFiltrada = filterData(dataCards, "mainField", event.target.value);
     cardsContainer.innerHTML = "";
     cardsContainer.appendChild(renderItems(dataFiltrada));
   });
 
   const ordenado = homeView.querySelector("select[name='name']");
   ordenado.addEventListener("change", (event) => {
-    const orden = sortData(dataCards, "name", event.target.value);
+    const orden = sortData(dataFiltrada, "name", event.target.value);
     cardsContainer.innerHTML = "";
     cardsContainer.appendChild(renderItems(orden));
   });
 
   const botonBorrar = homeView.querySelector("button[data-testid='button-clear']");
   botonBorrar.addEventListener("click", function () {
-    cardsContainer.appendChild(renderItems);
+    cardsContainer.innerHTML = "";
+    cardsContainer.appendChild(renderItems(data));
   });
+
+  const characterUrl = homeView.querySelectorAll(".li-container");
+  console.log("chat: "+ characterUrl);
+  characterUrl.forEach((characterUrl) => {
+  characterUrl.addEventListener("click", function (event) {
+    // Verificar si el clic se realizó en un elemento con la clase "liConteiner"
+    console.log("detalle");
+   // if (event.target.classList.contains("li-conteiner")) {
+      console.log("detalleInfo");
+      //const cardId = event.target.getAttribute("dataCards-id"); // Asegúrate de tener un atributo data-id en tus cards
+
+      // Construir la URL del componente characterDetails con la información de la card
+      const characterDetailsURL = `/CharacterDetails`;
+
+         // Redirigir al usuario a la nueva URL
+    window.location.href = characterDetailsURL;
+  //}
+});
+});
 
   return homeView;
 };

@@ -4,14 +4,14 @@ import { generateFooter } from "../components/Footer.js";
 export const characterDetails = (character) => {
 console.log(character);
 
-    const Details = document.createElement('div');
+ const Details = document.createElement('div');
    Details.setAttribute("id","detailsContainer");
 
     const header = generateHeader();
     Details.appendChild(header);
 
    const imgContainer = document.createElement('div');
-    imgContainer.setAttribute("id","image");
+    imgContainer.setAttribute("id","imageInfoContainer");
     
 
     const image = document.createElement("img");
@@ -32,8 +32,9 @@ console.log(character);
     characterInfo.appendChild(characterName);
     characterInfo.appendChild(characterDescription);
 
+    imgContainer.appendChild(characterInfo);
     Details.appendChild(imgContainer);
-    Details.appendChild(characterInfo);
+    /*Details.appendChild(characterInfo);*/
 
     const footerContainer = document.createElement('div');
     footerContainer.setAttribute("id","footer");

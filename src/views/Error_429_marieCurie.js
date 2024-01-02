@@ -10,7 +10,7 @@ contenedor.appendChild(contenidoInternoParrafo);
 
 // Crear el elemento de párrafo
 const tittle = document.createElement("h1");
-tittle.textContent = "u_u Error 429";
+tittle.textContent = "Error 429";
 tittle.classList.add("error-message", "title-style");
 contenidoInternoParrafo.appendChild(tittle);
 

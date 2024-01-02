@@ -19,6 +19,8 @@ export const renderItems = (data) => {
 // Contenedor Li
     const liContainer = document.createElement("div");
     liContainer.classList.add("li-container");
+    liContainer.setAttribute("data", "id");
+    
 
     //Contenedor info
     const infoContainer = document.createElement("div");

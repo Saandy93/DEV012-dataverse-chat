@@ -3,17 +3,19 @@
 }
 
 body {
-  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  background-color: ghostwhite;
 }
 
 img {
-  width: 10vw;
+  width: 20vh;
   height: 19vh;
+  border-radius: 3px;
+  box-shadow: 3px 2px 7px;
 }
 
 h1 {
-  font-size:xx-large;
-  background-color: #ebbba7;
+  font-size: xx-large;
+  background-color: ghostwhite;
   padding: 4vh;
   border-radius: 10vh;
   opacity: 0.9;
@@ -21,13 +23,12 @@ h1 {
 
 header {
   background-image: url(images/FondoMujeres.jpeg);
- background-size: contain;
+  background-size: contain;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
-  text-decoration: underline;
-  text-shadow: 5px 3px 5px rgb(8, 8, 8);
-  color: rgb(17, 18, 18);
+  text-shadow: 2px 1px 2px rgb(94, 11, 135);
+  color: rgb(176, 91, 255);
   padding-bottom: 8vh;
   padding-top: 8vh;
 }
@@ -35,7 +36,7 @@ header {
 nav {
   display: flex;
   justify-content: center;
-  background-image: linear-gradient(0deg, #ece4ed 0%, #dda73c 50%);
+  background: linear-gradient(0deg, #f8d8fc 0%, rgba(255, 215, 129, 0.844) 80%);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
@@ -46,8 +47,7 @@ label {
 }
 
 select {
-
-  font-style: italic;
+  /*font-style: italic;*/
   font-size: medium;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -68,7 +68,6 @@ p {
   color: rgb(1, 5, 8);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: small;
   padding-bottom: 3vh;
 }
 
@@ -76,16 +75,15 @@ li {
   padding: 8px;
   padding-bottom: 22vh;
   background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
-  border: 1px solid #260144;
   border-radius: 5px;
   box-shadow: 5px 8px 8px rgba(115, 11, 200, 0.26);
-
   width: 20vw;
   height: 30vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: small;
-  list-style:none;
+  list-style-type: none;
+  cursor: pointer;
 }
 
 button {
@@ -97,10 +95,10 @@ button {
   border-radius: 8px;
   background: linear-gradient(
     0deg,
-    rgb(186, 149, 204)0%,
+    rgb(186, 149, 204) 0%,
     rgba(255, 230, 177, 0.488) 100%
   );
-  border: 2px solid white;
+  border: 2px solid #f8d8fc;
   cursor: pointer;
 }
 
@@ -108,11 +106,10 @@ button {
   display: flex;
   justify-content: center;
   margin-top: 6vh;
-  background-image: linear-gradient(0deg, #ece4ed 0%, #dda73c 50%);
+  background: linear-gradient(0deg, #f8d8fc 0%, rgba(255, 215, 129, 0.844) 80%);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   opacity: 0.8;
-  font-style: italic;
 }
 
 .Cards {
@@ -124,13 +121,13 @@ button {
 }
 
 .Info {
-  font-style: italic;
   text-align: center;
   box-sizing: content-box;
 }
 
 .error-message {
-  color: #ff6207;
+  color: rgb(1, 5, 8);
+  text-align: center;
 }
 
 .title-style {
@@ -171,40 +168,51 @@ button {
 }
 
 .image-container-style-429 {
-  background-image: url("./images/marie-curie.jpg");
+  background-image: url("./images/marie_curie_Error.jpeg");
   background-size: cover;
-  width: 1000px;
+  width: 800px;
   height: 781px;
+  border-radius: 20px;
 }
 
-.text-container-style-429{
+.text-container-style-429 {
   width: 781px;
   height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: #f4f5f7;
+  /*justify-content: center;*/
+  background-color: #f8d8fc;
   border-radius: 70px;
-
+  opacity: 0.9;
+  margin-left: 50px;
+}
+.imgDetails{
+  width: 450px;
+  height: 430px;
+  border-radius: 5px;
+  box-shadow: 3px 6px 6px;
 }
 
-#detailsContainer{
+/*#detailsContainer{
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  width: auto;
+}*/
+
+#imageInfoContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  padding-top: 100px;
 }
 
-
- #image{
-display: flex;
-justify-content: center;
- }
-
- #text{
-justify-content: center;
-border: 2px solid rgba(248, 248, 250, 0.813);
-width: 600px;
-height: 400px;
- }
+#text {
+  justify-content: center;
+  border: 2px solid #f8d8fc;
+  width: 650px;
+  height: 410px;
+  box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
+}

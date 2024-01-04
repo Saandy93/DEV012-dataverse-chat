@@ -15,6 +15,9 @@ export const renderItems = (data) => {
     const imgElement = document.createElement("img");
     imgElement.setAttribute("src", element.imageUrl);
     imgElement.setAttribute("alt", element.name);
+    const link = document.createElement("a");
+    link.setAttribute("href",`/CharacterDetails?id=${element.id}`);
+    
 
 // Contenedor Li
     const liContainer = document.createElement("div");
@@ -55,7 +58,8 @@ export const renderItems = (data) => {
     ddCampoEstudio.textContent = element.facts.mainField;
 
     // Agregar todos los elementos creados al DOM
-    infoContainer.appendChild(imgElement);
+    infoContainer.appendChild(link);
+    link.appendChild(imgElement);
     infoContainer.appendChild(dtNombre);
     infoContainer.appendChild(ddNombre);
     infoContainer.appendChild(dtDescripcion);
@@ -65,6 +69,8 @@ export const renderItems = (data) => {
     infoContainer.appendChild(dtCampoEstudio);
     infoContainer.appendChild(ddCampoEstudio);
     infoContainer.appendChild(dlElement);
+
+  
 
     liElement.appendChild(infoContainer);
     liContainer.appendChild(liElement);

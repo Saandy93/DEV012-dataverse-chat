@@ -1,5 +1,3 @@
-
-
 export const characterDetails = (character) => {
 console.log(character);
 

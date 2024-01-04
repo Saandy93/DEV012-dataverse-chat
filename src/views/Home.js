@@ -3,7 +3,6 @@ import { generateFooter } from "../components/Footer.js";
 import { generateHeader } from "../components/header.js";
 import { subHeader } from "../components/subHeader.js";
 import { Nav } from "../components/Nav.js";
-//import { characterDetails } from "./characterDetail.js";
 import { filterData, sortData } from "../lib/dataFunctions.js";
 import data from "../data/dataset.js";
 
@@ -31,6 +30,7 @@ export const home = () => {
   const cardsList = renderItems(dataCards);
   cardsContainer.appendChild(cardsList);
 
+
   let dataFiltrada;
   const selectFiltro = homeView.querySelector('select[name="filtro"]');
   selectFiltro.addEventListener("change", (event) => {
@@ -52,27 +52,7 @@ export const home = () => {
     cardsContainer.appendChild(renderItems(data));
   });
 
- /* const characterUrl = homeView.querySelectorAll(".li-container");
-  characterUrl.forEach((characterUrl) => {
-  characterUrl.addEventListener("click", function (event) {
-    // Verificar si el clic se realizó en un elemento con la clase "liConteiner"
-   
-   // if (event.target.classList.contains("li-conteiner")) {
-      console.log("detalleInfo");
-      const cardId = event.target.getAttribute("dataCards-id"); // Asegúrate de tener un atributo data-id en tus cards
-      const clickedCharacter = data.find(character => character.id === cardId);
-
-      // Construir la URL del componente characterDetails con la información de la card
-      const characterDetailsURL = `/CharacterDetails?id=${clickedCharacter.cardId}`;
-
-         // Redirigir al usuario a la nueva URL
-    window.location.href = characterDetailsURL;
-  //}
-});
-});*/
-
   return homeView;
 };
 
-// para descomentar ctrl + k +u
-// para comentar cntrl + k+ c
+

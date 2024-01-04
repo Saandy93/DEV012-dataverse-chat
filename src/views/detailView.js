@@ -1,6 +1,6 @@
 import { generateHeader } from "../components/header.js";
 import { generateFooter } from "../components/Footer.js";
-import { characterDetails } from "../components/Details.js";
+import { characterDetails } from "../components/characterDetails.js";
 
 
 
@@ -12,7 +12,7 @@ console.log(character);
  const header = generateHeader();
  characterContainer.appendChild(header);
 
- const infoCharacter = characterDetails();
+ const infoCharacter = characterDetails(character);
  characterContainer.appendChild(infoCharacter);
 
  const footer = generateFooter();

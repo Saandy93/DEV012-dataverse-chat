@@ -1,5 +1,4 @@
-export const characterDetails = (character) => {
-console.log(character);
+export const characterDetails = (element) => {
 
  const Details = document.createElement('div');
    Details.setAttribute("id","detailsContainer");
@@ -19,7 +18,7 @@ console.log(character);
     characterInfo.setAttribute("id","text");
 
     const characterName = document.createElement('h2');
-    characterName.textContent = 'Nombre:';
+    characterName.textContent = 'Nombre:'+ element.name;
 
     const characterDescription = document.createElement('h2');
     characterDescription.textContent ='Descripción:';

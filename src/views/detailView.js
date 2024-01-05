@@ -4,15 +4,15 @@ import { characterDetails } from "../components/characterDetails.js";
 
 
 
-export const details = (character) => {
-console.log(character);
+export const details = () => {
+/*console.log(character);*/
 
  const characterContainer = document.createElement('div');
 
  const header = generateHeader();
  characterContainer.appendChild(header);
 
- const infoCharacter = characterDetails(character);
+ const infoCharacter = characterDetails();
  characterContainer.appendChild(infoCharacter);
 
  const footer = generateFooter();

@@ -1,4 +1,8 @@
-export const characterDetails = (element) => {
+import { characterData } from "../lib/dataFunctions.js";
+import data from "../data/dataset.js";
+
+export const characterDetails = (props) => {
+  console.log(props);
 
  const Details = document.createElement('div');
    Details.setAttribute("id","detailsContainer");
@@ -6,9 +10,11 @@ export const characterDetails = (element) => {
    const imgContainer = document.createElement('div');
     imgContainer.setAttribute("id","imageInfoContainer");
     
+    const characterId = characterData(props.id, data);
+   console.log(characterId);
 
     const image = document.createElement("img");
-    image.src = '/images/marie-curie.jpg';
+    image.src = characterId.imageUrl;
     image.alt = "Imagen Central";
     image.className = "imgDetails"; // Agrega una clase para aplicar estilos desde CSS
     imgContainer.appendChild(image);
@@ -18,21 +24,30 @@ export const characterDetails = (element) => {
     characterInfo.setAttribute("id","text");
 
     const characterName = document.createElement('h2');
-    characterName.textContent = 'Nombre:'+ element.name;
+    characterName.textContent = `Nombre: `;
+    const characterNameText = document.createTextNode(characterId.nombre);
+    characterName.appendChild(characterNameText);
 
     const characterDescription = document.createElement('h2');
-    characterDescription.textContent ='Descripción:';
-    characterName.className = "name";
+    characterDescription.textContent = `Descripción: `;
+    const characterDescriptionText = document.createTextNode(characterId.descripcion);
+    characterDescription.appendChild(characterDescriptionText);
     characterDescription.className = "info";
+
+    /*const buttonChat = document.createElement('button');
+    buttonChat.setAttribute('data-testid', 'button-chat');
+    buttonChat.textContent = 'Chat';*/
+       
     
     characterInfo.appendChild(characterName);
-    characterInfo.appendChild(characterDescription)
+    characterInfo.appendChild(characterDescription);
+    //characterInfo.appendChild(characterId)
 
     imgContainer.appendChild(characterInfo);
     Details.appendChild(imgContainer);
-   
+    //Details.appendChild(buttonChat);
 
-    
+   
 
     return Details
 }

@@ -17,4 +17,15 @@ export function sortData(data, alfabetico, abecedario) {
   }
 }
 
- 
+export function characterData(characterId, data){
+  if (Array.isArray(data)) {
+  const character = data.find(personaje => personaje.id === characterId);
+if (character){
+ // Acceder a la información específica del personaje
+ const nombre = character.name;
+ const descripcion = character.description;
+ const imagen = character.imageUrl; 
+ return {nombre, descripcion,imagen}
+ }
+}
+}

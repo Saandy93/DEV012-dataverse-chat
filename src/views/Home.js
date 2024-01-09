@@ -1,3 +1,4 @@
+
 import { renderItems } from "../components/renderItem.js";
 import { generateFooter } from "../components/Footer.js";
 import { generateHeader } from "../components/header.js";
@@ -5,6 +6,7 @@ import { subHeader } from "../components/subHeader.js";
 import { Nav } from "../components/Nav.js";
 import { filterData, sortData } from "../lib/dataFunctions.js";
 import data from "../data/dataset.js";
+import { navigateTo } from "../router.js";
 
 export const home = () => {
   const homeView = document.createElement("div");
@@ -52,7 +54,13 @@ export const home = () => {
     cardsContainer.appendChild(renderItems(data));
   });
 
+  const apiButton = homeView.querySelector("button[data-testid='button-api']");
+  apiButton.addEventListener("click", function () {
+  navigateTo("/apiKey");
+
+  });
+
+
   return homeView;
 };
-
 

@@ -17,18 +17,16 @@ export const setRoutes = (newRoutesValue) => {
   }
 };
 
-
 export const renderView = (pathname, props = {}) => {
   const root = rootElement;
   root.innerHTML = "";
   if (ROUTES[pathname]) {
-   const template = ROUTES[pathname]();
+   const template = ROUTES[pathname](props);
     root.appendChild(template);
   } else {
     root.appendChild(ROUTES["/error"]());
   }
-  
-};
+  };
 
 // guarda el historial de navegacion
 
@@ -44,8 +42,6 @@ export const navigateTo = (pathname, props = {}) => {
   export const onURLChange = (pathname, params) =>{
     const queryParams = new URLSearchParams(params);
     const id = queryParams.get('id');
-  
-  
-  
+      
   renderView(pathname, id);
 };

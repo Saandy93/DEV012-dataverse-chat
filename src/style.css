@@ -174,8 +174,8 @@ button {
   height: 500px;
   border-radius: 20px;
   margin-left: 80px;
-    margin-top: 80px;
-    box-shadow: 4px 4px 8px rgb(1, 5, 8);
+  margin-top: 80px;
+  box-shadow: 4px 4px 8px rgb(1, 5, 8);
 }
 
 .text-container-style-429 {
@@ -200,13 +200,26 @@ button {
   box-shadow: 3px 6px 6px;
 }
 
-/*#detailsContainer{
+#api {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  justify-content: space-around;
+  padding-top: 100px;
+}
+
+#apiContainer {
+  display: flex;
   align-items: center;
-  width: auto;
-}*/
+  justify-content: space-around;
+  border: 2px solid #f0b5f8;
+  width: 590px;
+  height: 410px;
+  box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
+}
+
+#nameLabel {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 
 #imageInfoContainer {
   display: flex;
@@ -215,10 +228,26 @@ button {
   padding-top: 100px;
 }
 
+#nameInput {
+  border: 2px solid #f8d8fc;
+  width: 200px;
+  height: 35px;
+  box-shadow: 4px 4px 5px rgba(115, 11, 200, 0.26);
+}
+
 #text {
   justify-content: center;
   border: 2px solid #f8d8fc;
   width: 650px;
   height: 410px;
   box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
+}
+
+.api-button{
+margin-left: 300px;
+}
+
+buttonChat{
+margin-left: 80px;
+
 }

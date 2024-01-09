@@ -53,6 +53,11 @@ export const Nav = () => {
   buttonClear.setAttribute('data-testid', 'button-clear');
   buttonClear.textContent = 'Limpiar';
 
+ const buttonApi = document.createElement('button');
+ buttonApi.setAttribute('data-testid', 'button-api');
+ buttonApi.textContent = 'Api-Key';
+ buttonApi.classList.add("api-button");
+
   // Agregar elementos al nav
   navElement.appendChild(labelFilter);
   navElement.appendChild(selectFilter);
@@ -61,6 +66,7 @@ export const Nav = () => {
   selectSort.appendChild(optionAsc);
   selectSort.appendChild(optionDesc);
   navElement.appendChild(buttonClear);
+  navElement.appendChild(buttonApi);
 
   return navElement;
 };

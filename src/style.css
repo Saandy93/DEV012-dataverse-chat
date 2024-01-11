@@ -63,12 +63,13 @@ h2 {
 }
 
 p {
+  text-align: center;
   font-size: medium;
-  padding-left: 5vh;
+  /* padding-left: 5vh; */
   color: rgb(1, 5, 8);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding-bottom: 3vh;
+  margin-top: revert;
 }
 
 li {
@@ -195,7 +196,7 @@ button {
 }
 .imgDetails {
   width: 450px;
-  height: 430px;
+  height: 410px;
   border-radius: 5px;
   box-shadow: 3px 6px 6px;
 }
@@ -224,7 +225,7 @@ button {
 #imageInfoContainer {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
+  /*gap: 2rem;*/
   padding-top: 100px;
 }
 
@@ -241,6 +242,54 @@ button {
   width: 650px;
   height: 410px;
   box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
+
+}
+
+#chat-container{
+  display: flex;
+  justify-content: center;
+  border: 3px solid black
+}
+
+#chat{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
+  border: 2px solid #f8d8fc;
+  width: 650px;
+  height: 410px;
+  margin-left: 500px;
+  box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
+}
+
+#chat-window{
+  border: 2px solid #f8d8fc;
+  width: 580px;
+  height: 220px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(115, 11, 200, 0.26);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+#input-chat{
+  width: 540px;
+  height: 70px;
+  border: 2px solid rgba(115, 11, 200, 0.26);
+  border-radius: 8px;
+  box-shadow: 3px 3px 5px rgba(115, 11, 200, 0.26);
+}
+
+/*#detail-view{
+display: flex;
+
+}*/
+
+#character-container{
+  display: flex;
+  flex-direction: column;
+gap: 2rem;
 }
 
 .api-button{

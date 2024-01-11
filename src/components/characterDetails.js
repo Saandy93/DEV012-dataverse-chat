@@ -14,7 +14,7 @@ export const characterDetails = (props) => {
    console.log(characterId);
 
     const image = document.createElement("img");
-    image.src = characterId.imageUrl;
+    image.src = props.imageSource;
     image.alt = "Imagen Central";
     image.className = "imgDetails"; // Agrega una clase para aplicar estilos desde CSS
     imgContainer.appendChild(image);
@@ -23,13 +23,13 @@ export const characterDetails = (props) => {
     const characterInfo = document.createElement('div');
     characterInfo.setAttribute("id","text");
 
-    const characterName = document.createElement('h2');
-    characterName.textContent = `Nombre: `;
+    const characterName = document.createElement('p');
+    //characterName.textContent = `Nombre: `;
     const characterNameText = document.createTextNode(characterId.nombre);
     characterName.appendChild(characterNameText);
 
-    const characterDescription = document.createElement('h2');
-    characterDescription.textContent = `Descripción: `;
+    const characterDescription = document.createElement('p');
+    //characterDescription.textContent = `Descripción: `;
     const characterDescriptionText = document.createTextNode(characterId.descripcion);
     characterDescription.appendChild(characterDescriptionText);
     characterDescription.className = "info";
@@ -37,11 +37,9 @@ export const characterDetails = (props) => {
     /*const buttonChat = document.createElement('button');
     buttonChat.setAttribute('data-testid', 'button-chat');
     buttonChat.textContent = 'Chat';*/
-       
-    
+           
     characterInfo.appendChild(characterName);
     characterInfo.appendChild(characterDescription);
-    //characterInfo.appendChild(characterId)
 
     imgContainer.appendChild(characterInfo);
     Details.appendChild(imgContainer);

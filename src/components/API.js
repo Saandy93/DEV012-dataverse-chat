@@ -21,7 +21,23 @@ export const apiKey = () => {
     submitApi.classList.add("submit-button");
     apiContainer.appendChild(submitApi);
 
-    apiView.appendChild(apiContainer);
+  submitApi.addEventListener('click', function () {
+    // valor del input
+    const apiKeyValue = nameInput.value;
+
+    // quita "" comienzo/final y compara que no sea una cadena vacía)
+    if (apiKeyValue.trim() !== "") {
+      //almacena la api
+      localStorage.setItem("apiKeyValue", apiKeyValue);
+      // Si es una api válida mostrar mensaje de alerta que fue ingresada
+      alert('API-KEY registrada: ' + apiKeyValue);
+    } else {
+      // Si no es válida, redireccionar a la vista de error
+      window.location.href = "/error2";
+    }
+  });
+
+  apiView.appendChild(apiContainer);
 
     return apiView;
 

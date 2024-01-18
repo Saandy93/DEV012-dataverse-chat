@@ -1,38 +1,25 @@
 export const error404 = () => {
-  // Crear un contenedor div para aplicar el fondo
-  const contenedor = document.createElement("div");
-  contenedor.classList.add("container-style");
+  const errorContainer = document.createElement("div");
+  errorContainer.setAttribute("id", "error-container");
 
-  // Crear un contenedor interno para el párrafo
-  const contenidoInternoParrafo = document.createElement("div");
-  contenidoInternoParrafo.classList.add("text-container-style");
-  contenedor.appendChild(contenidoInternoParrafo);
+  // Crear un elemento de imagen de fondo
+  const backgroundImage = document.createElement("img");
+  backgroundImage.src = "./images/Ada.error_404.jpeg";
+  backgroundImage.classList.add("background-image");
+  errorContainer.appendChild(backgroundImage);
 
-  // Crear el elemento de párrafo
-  const tittle = document.createElement("h1");
-  tittle.textContent = "u_u Error 404";
-  tittle.classList.add("error-message", "title-style");
-  contenidoInternoParrafo.appendChild(tittle);
+  // Crear un cuadro translúcido con el mensaje de error
+  const errorOverlay = document.createElement("div");
+  errorOverlay.classList.add("error-overlay");
 
-  // crea el contenido del elemento
-  const parrafo = document.createElement("p");
-  parrafo.textContent =
-    "Parece que el enlace está dañado o has introducido una URL que no existe en este sitio.";
-  parrafo.classList.add("error-message", "paragraph-style");
-  contenidoInternoParrafo.appendChild(parrafo);
+  const errorMessage = document.createElement("p");
+  errorMessage.textContent = "Error 404: Parece que el enlace está dañado o has introducido una URL que no existe en este sitio.";
+  errorOverlay.appendChild(errorMessage);
 
-  // Crear un contenedor interno para la imagen
-  const contenidoInternoImagen = document.createElement("div");
-  contenidoInternoImagen.classList.add("image-container-style-404");
+  errorContainer.appendChild(errorOverlay);
 
-  // Aplicar efecto espejo horizontal a la imagen
-  contenidoInternoImagen.classList.add("mirror-effect");
-
-  // Agregar el contenedor interno de la imagen al contenedor principal
-  contenedor.appendChild(contenidoInternoImagen);
-
-  // Agregar el contenedor interno del párrafo al contenedor principal
-  contenedor.appendChild(contenidoInternoParrafo);
-
-  return contenedor;
+  return errorContainer;
 };
+
+
+

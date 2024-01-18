@@ -126,6 +126,35 @@ button {
   box-sizing: content-box;
 }
 
+#error-container{
+display: flex;
+justify-content: space-around;
+}
+
+.background-image {
+  width: auto;
+  height: auto;
+ /* object-fit: cover;*/
+}
+
+.error-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,180%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 2px solid #f0b5f8;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.error-overlay p {
+  color: #000; /* Color del texto */
+  font-size: 18px;
+  font-weight: bold;
+}
+
 .error-message {
   color: rgb(1, 5, 8);
   text-align: center;
@@ -168,8 +197,49 @@ button {
   border-radius: 70px;
 }
 
-.image-container-style-429 {
-  background-image: url("./images/marie_curie_Error.jpeg");
+#imageError_429{
+  max-width: 100%; /* Ajusta el tamaño máximo de la imagen */
+  max-height: 100%; /* Ajusta la altura máxima de la imagen */
+  opacity: 0.9; /* Opacidad de la imagen */
+
+}
+
+.imageError_429 {
+
+}
+.container-style{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo translúcido */
+}
+
+.text-container-style-429 {
+  text-align: center;
+  padding: 20px;
+}
+/* Estilo para el mensaje de error */
+.error-message {
+  color: #ff0000; /* Color rojo para el mensaje de error */
+}
+
+/* Estilo para el título */
+.title-style{
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+/* Estilo para el párrafo */
+.paragraph-style {
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+
+
+/*.imageError_429 {
+ /* background-image: url("./images/Ada_Error404.jpeg");
   background-size: contain;
   width: 550px;
   height: 500px;
@@ -177,7 +247,7 @@ button {
   margin-left: 80px;
   margin-top: 80px;
   box-shadow: 4px 4px 8px rgb(1, 5, 8);
-}
+}*/
 
 .text-container-style-429 {
   width: 781px;
@@ -264,6 +334,9 @@ button {
 }
 
 #chat-window{
+  display: flex;
+ flex-direction: column;
+ gap: 2rem;
   border: 2px solid #f8d8fc;
   width: 580px;
   height: 220px;
@@ -271,6 +344,7 @@ button {
   box-shadow: 3px 3px 5px rgba(115, 11, 200, 0.26);
   margin-bottom: 20px;
   margin-top: 10px;
+  overflow-y: auto;  /* Hace que el contenedor sea desplazable verticalmente */
 }
 
 #input-chat{
@@ -280,7 +354,12 @@ button {
   border-radius: 8px;
   box-shadow: 3px 3px 5px rgba(115, 11, 200, 0.26);
 }
+ 
+.chat-message{
+background-color: rgb(168 91 240 / 29%);
+border-radius: 14px;
 
+}
 /*#detail-view{
 display: flex;
 

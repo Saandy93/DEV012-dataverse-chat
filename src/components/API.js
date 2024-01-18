@@ -33,7 +33,7 @@ export const apiKey = () => {
       alert('API-KEY registrada: ' + apiKeyValue);
     } else {
       // Si no es válida, redireccionar a la vista de error
-      window.location.href = "/error2";
+      window.location.href = "/error";
     }
   });
 

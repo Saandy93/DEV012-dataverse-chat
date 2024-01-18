@@ -18,22 +18,27 @@ export const createChat = () => {
   buttonChat.addEventListener("click", () => {
     const inputValue = input.value;
 
-    chatCompletions(localStorage.getItem("apiKeyValue"), inputValue).then(
-      (messages) => {
+    // Crear un globo de diálogo para el mensaje del usuario
+    const userMessageElement = createMessageElement(inputValue, "user");
+    chatWindow.appendChild(userMessageElement);
+
+    //función que consume la api y retorna chat 
+    chatCompletions(localStorage.getItem("apiKeyValue"), inputValue)
+      .then((messages) => {
         // Manejar los mensajes de respuesta de la API
         const responseMessage = messages.choices[0].message.content;
 
-        // nuevo contenedor para mostrar el mensaje en chatWindow
-        const responseElement = document.createElement("div");
-        responseElement.classList.add("chat-message");
-        responseElement.textContent = responseMessage;
-
+        // Crear un globo de diálogo para la respuesta de la IA
+        const responseElement = createMessageElement(responseMessage, "ai");
         chatWindow.appendChild(responseElement);
-
+      })
+      .catch((error) => {
+        console.error("Error al obtener la respuesta de la API:", error);
+      })
+      .finally(() => {
         // Limpia input después de enviar el mensaje
         input.value = "";
-      }
-    );
+      });
   });
 
   chat.appendChild(chatWindow);
@@ -43,23 +48,11 @@ export const createChat = () => {
   return chat;
 };
 
-// Puedes agregar más configuraciones, eventos, etc., según tus necesidades.
-/*
+// crear un globo de diálogo con el mensaje y clase especificados
+const createMessageElement = (message, className) => {
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("chat-message", className);
+  messageElement.textContent = message;
+  return messageElement;
+};
 
-    const addMessage = (message) => {
-      const messageElement = document.createElement('div');
-      messageElement.classList.add('chat-message');
-      messageElement.textContent = message;  //creatTextNode?
-  
-      chatWindow.appendChild(messageElement);
-    }
-  
-    const render = () => {
-        chat.appendChild(chatWindow);
-      return chat;
-    }
-  
-    return {
-      addMessage,
-      render,
-    };*/

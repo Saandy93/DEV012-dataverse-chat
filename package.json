@@ -4,10 +4,11 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
+    "deploy": "gh-pages -d src",
     "htmlhint": "htmlhint src/*.html test/*.html",
     "eslint": "eslint --ext .js src/ test/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest --verbose --coverage test/",
+    "test": "jest --verbose --coverage test/openiaAPI.spec.js",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/ -s"
   },

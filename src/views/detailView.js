@@ -28,8 +28,12 @@ detailView.setAttribute("id", "detail-view")
  const infoCharacter = characterDetails(props);
  characterContainer.appendChild(infoCharacter);
 
+ const jump = document.createElement("hr");
+ jump.classList.add("hr-detailView");
+ detailView.appendChild(jump);
 
-   const chatComponent = createChat();
+
+   const chatComponent = createChat(props.name);
    characterContainer.appendChild(chatComponent);
   
  

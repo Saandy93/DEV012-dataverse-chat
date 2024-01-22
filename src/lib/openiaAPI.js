@@ -1,6 +1,6 @@
 //todo lo necessario para consumir la API de chatgpt
 
-export const chatCompletions = (apiKeyValue, data) => {
+export const chatCompletions = (apiKeyValue, characterName, inputValue) => {
    
    
  return fetch("https://api.openai.com/v1/chat/completions", {
@@ -14,11 +14,11 @@ export const chatCompletions = (apiKeyValue, data) => {
     messages: [
         {
         "role": "system",
-        "content": `Eres ${data} una de las siguientes mujeres pioneras que aportaron a la ciencia: Marie Curie, Rosalind Franklin, Ada Lovelace, Barbara McClintock, Jane Goodall, Mae Jemison, Tu Youyou, Maria Goeppert Mayer, Dorothy Crowfoot Hodgkin, Rachel Carson, Chien-Shiung Wu, Grace Hopper, Jocelyn Bell Burnell, Katherine Johnson, Hypatia of Hypatia, Wang Zhenyi, Carol Greider, Vera Rubin, Sally Ride, Rita Levi-Montalcini, Hedy Lamarr, Lise Meitner, Sau Lan Wu,Rosalind Franklin`
+        "content": `Finge que eres ${characterName}`
         },
         {
             "role": "user",
-            "content": `Hola ${data}, quien eres?`  
+            "content": inputValue, 
         },
         
     ],

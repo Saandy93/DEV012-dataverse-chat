@@ -1,6 +1,6 @@
 import { chatCompletions } from "../lib/openiaAPI.js";
 
-export const createChat = () => {
+export const createChat = (characterName) => {
   const chat = document.createElement("div");
   chat.setAttribute("id", "chat");
 
@@ -23,8 +23,8 @@ export const createChat = () => {
     chatWindow.appendChild(userMessageElement);
 
     //función que consume la api y retorna chat 
-    chatCompletions(localStorage.getItem("apiKeyValue"), inputValue)
-      .then((messages) => {
+    chatCompletions(localStorage.getItem("apiKeyValue"),characterName, inputValue)
+      .then((messages) => { //agrgarlo en .then "inputvalue"
         // Manejar los mensajes de respuesta de la API
         const responseMessage = messages.choices[0].message.content;
 

@@ -22,10 +22,9 @@ setRoutes(routes);
 setrootElement(viewContainer);
 
 document.addEventListener("DOMContentLoaded", (event) => {
-onURLChange(event.target.location.pathname, event.target.location.search); 
+  onURLChange(event.target.location.pathname, event.target.location.search);
 });
 
 window.addEventListener("popstate", (event) => {
   onURLChange(event.target.location.pathname, event.target.location.search);
-
 });

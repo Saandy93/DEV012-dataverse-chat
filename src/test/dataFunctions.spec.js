@@ -3,9 +3,10 @@ import { sortData } from "../lib/dataFunctions.js";
 import { data as fakeData } from "../data/dataset.js";
 import { dataSort as fakeDataa } from "../data/dataset.js";
 
+
 describe("filterData", () => {
   it("campoMatematicas", () => {
-    const filtradoMatematicas = filterData(
+    const filtradoMatematicas = filterData (
       fakeData,
       "mainField",
       "Matemáticas"

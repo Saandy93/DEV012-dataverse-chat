@@ -6,9 +6,9 @@
   "scripts": {
     "deploy": "gh-pages -d src",
     "htmlhint": "htmlhint src/*.html test/*.html",
-    "eslint": "eslint --ext .js src/ test/",
+    "eslint": "eslint --ext .js src/",
     "pretest": "npm run eslint && npm run htmlhint",
-    "test": "jest --verbose --coverage test/openiaAPI.spec.js",
+    "test": "jest --verbose --coverage test/",
     "open-coverage-report": "opener ./coverage/lcov-report/index.html",
     "start": "serve src/ -s"
   },

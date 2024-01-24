@@ -164,7 +164,7 @@ justify-content: space-around;
 
 .imgDetails {
   width: 450px;
-  height: 423px;
+  height: 410px;
   border-radius: 5px;
   box-shadow: 3px 6px 6px;
 }
@@ -230,7 +230,7 @@ justify-content: space-around;
   border: 2px solid #f8d8fc;
   width: 650px;
   height: 410px;
-  margin-left: 500px;
+  margin-left: 410px;
   box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
 }
 

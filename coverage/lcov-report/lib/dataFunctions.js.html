@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">36.84% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>7/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/12</span>
+                <span class='fraction'>6/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">42.85% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/7</span>
+                <span class='fraction'>3/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">43.75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/16</span>
+                <span class='fraction'>7/16</span>
             </div>
         
             
@@ -99,21 +99,21 @@
 <a name='L34'></a><a href='#L34'>34</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -131,22 +131,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//traer funciones de filtro/orden desde dataVerse
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >filterData(</span>data, camposEstudio, camposFiltrados) {
-  const tarjetasFiltradas = <span class="cstat-no" title="statement not covered" >data.filter (<span class="fstat-no" title="function not covered" >(t</span>arjeta) =&gt; {</span>
-    const facts = <span class="cstat-no" title="statement not covered" >tarjeta.facts &amp;&amp; tarjeta.facts[camposEstudio];</span>
-<span class="cstat-no" title="statement not covered" >    return facts &amp;&amp; facts.includes(camposFiltrados);</span>
+export function filterData(data, camposEstudio, camposFiltrados) {
+  const tarjetasFiltradas = data.filter ((tarjeta) =&gt; {
+    const facts = tarjeta.facts &amp;&amp; tarjeta.facts[camposEstudio];
+    return facts &amp;&amp; facts.includes(camposFiltrados);
   });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return tarjetasFiltradas;</span>
+  return tarjetasFiltradas;
 }
 //function sortData(data, sortBy, sortOrder)
-export function <span class="fstat-no" title="function not covered" >sortData(</span>data, alfabetico, abecedario) {
-<span class="cstat-no" title="statement not covered" >  if (abecedario === "Asc") {</span>
+export function sortData(data, alfabetico, abecedario) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (abecedario === "Asc") {
 <span class="cstat-no" title="statement not covered" >    return data.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; <span class="cstat-no" title="statement not covered" >a[alfabetico].localeCompare(b[alfabetico]))</span>;</span>
-  } else <span class="cstat-no" title="statement not covered" >if (abecedario === "Desc") {</span>
+  } else <span class="missing-if-branch" title="if path not taken" >I</span>if (abecedario === "Desc") {
 <span class="cstat-no" title="statement not covered" >    return data.sort(<span class="fstat-no" title="function not covered" >(a</span>, b) =&gt; <span class="cstat-no" title="statement not covered" >b[alfabetico].localeCompare(a[alfabetico]))</span>;</span>
   } else {
-<span class="cstat-no" title="statement not covered" >    return data; </span>// Orden
+    return data; // Orden
   }
 }
 &nbsp;
@@ -169,7 +169,7 @@ export function <span class="fstat-no" title="function not covered" >characterDa
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-01-23T15:22:21.125Z
+                at 2024-01-23T17:07:34.146Z
             </div>
         <script src="../prettify.js"></script>
         <script>

@@ -26,7 +26,7 @@ export const details = (props) => {
 
   const jump = document.createElement("hr");
   jump.classList.add("hr-detailView");
-  detailView.appendChild(jump);
+  characterContainer.appendChild(jump);
 
   const chatComponent = createChat(props.name);
   characterContainer.appendChild(chatComponent);

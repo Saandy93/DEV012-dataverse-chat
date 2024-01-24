@@ -1,6 +1,11 @@
 export const Nav = () => {
-  const navElement = document.createElement("nav");
+const navContainer = document.createElement("div");
+navContainer.setAttribute("id", "navContainer");
 
+
+  const navElement = document.createElement("nav");
+  navElement.setAttribute("id", "navElement");
+  navContainer.appendChild(navElement);
   // Etiqueta y select para filtrar
   const labelFilter = document.createElement("label");
   labelFilter.setAttribute("for", "Campo de estudio");
@@ -68,5 +73,5 @@ export const Nav = () => {
   navElement.appendChild(buttonClear);
   navElement.appendChild(buttonApi);
 
-  return navElement;
+  return navContainer;
 };

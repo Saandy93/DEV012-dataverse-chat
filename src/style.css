@@ -56,18 +56,18 @@ select {
 }
 
 h2 {
-  padding-left: 5vh;
+  padding-left: 3vh;
   color: rgb(16, 16, 16);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: medium;
+  font-size: small;
   padding-top: 3vh;
 }
 
 p {
-  text-align: center;
-  font-size: medium;
-  /* padding-left: 5vh; */
+  text-align: justify;
+  font-size: small;
+  padding-left: 3vh; 
   color: rgb(1, 5, 8);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding-bottom: 3vh;
@@ -76,12 +76,11 @@ p {
 
 li {
   padding: 8px;
-  padding-bottom: 22vh;
   background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
-  border-radius: 5px;
+  border-radius: 2vh;
   box-shadow: 5px 8px 8px rgba(115, 11, 200, 0.26);
   width: 20vw;
-  height: 30vh;
+  height: 50vh;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: small;
@@ -165,7 +164,7 @@ justify-content: space-around;
 
 .imgDetails {
   width: 450px;
-  height: 410px;
+  height: 423px;
   border-radius: 5px;
   box-shadow: 3px 6px 6px;
 }
@@ -206,10 +205,13 @@ justify-content: space-around;
 }
 
 #text {
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 2px solid #f8d8fc;
-  width: 650px;
-  height: 410px;
+  padding: 6vh;
+  width: 500px;
+  height: 330px;
   box-shadow: 5px 6px 7px rgba(115, 11, 200, 0.26);
 
 }
@@ -271,9 +273,12 @@ gap: 2rem;
 }
 
 .hr-detailView{
-  width: 60px;
-  height:1px; 
-  background-color:#040f1d; 
+  background-color: #f0b5f8;
+  margin-top: 8vh;
+  margin-bottom: 4vh;
+  height: 0.1vh;
+  width: 60vh;
+  box-shadow: 5px 3px 8px rgb(115 11 200 / 53%);
 }
 
 .api-button{

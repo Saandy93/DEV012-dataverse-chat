@@ -25,15 +25,15 @@ export const characterDetails = (props) => {
   const characterName = document.createElement("p");
   //characterName.textContent = `Nombre: `;
   const characterNameText = document.createTextNode(characterId.nombre);
+  characterName.className = "info-details";
   characterName.appendChild(characterNameText);
 
   const characterDescription = document.createElement("p");
   //characterDescription.textContent = `Descripción: `;
-  const characterDescriptionText = document.createTextNode(
-    characterId.descripcion
-  );
+  const characterDescriptionText = document.createTextNode(characterId.descripcion);
+  characterDescription.className = "info-details";
   characterDescription.appendChild(characterDescriptionText);
-  characterDescription.className = "info";
+  
 
   /*const buttonChat = document.createElement('button');
     buttonChat.setAttribute('data-testid', 'button-chat');

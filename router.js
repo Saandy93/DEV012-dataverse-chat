@@ -21,12 +21,12 @@ export const renderView = (pathname, props = {}) => {
   const root = rootElement;
   root.innerHTML = "";
   if (ROUTES[pathname]) {
-   const template = ROUTES[pathname](props);
+    const template = ROUTES[pathname](props);
     root.appendChild(template);
   } else {
     root.appendChild(ROUTES["/error2"]());
   }
-  };
+};
 
 // guarda el historial de navegacion
 
@@ -39,9 +39,9 @@ export const navigateTo = (pathname, props = {}) => {
   renderView(pathname, props);
 };
 //
-  export const onURLChange = (pathname, params) =>{
-    const queryParams = new URLSearchParams(params);
-    const id = queryParams.get('id');
-      
+export const onURLChange = (pathname, params) => {
+  const queryParams = new URLSearchParams(params);
+  const id = queryParams.get("id");
+
   renderView(pathname, id);
 };

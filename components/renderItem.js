@@ -18,23 +18,21 @@ export const renderItems = (data) => {
     imgElement.setAttribute("src", props.imageUrl);
     imgElement.setAttribute("alt", props.name);
     const link = document.createElement("a");
-    link.addEventListener("click",function(){
+    link.addEventListener("click", function () {
       console.log(props);
-    navigateTo("/CharacterDetails",{
-      id: props.id,
-      name: props.name,
-      imageSource: props.imageUrl,
-      description: props.shortDescription,
+      navigateTo("/CharacterDetails", {
+        id: props.id,
+        name: props.name,
+        imageSource: props.imageUrl,
+        description: props.shortDescription,
+      });
     });
-  });
     //link.setAttribute("href",`/CharacterDetails?id=${element.id}`);
-    
 
-// Contenedor Li
+    // Contenedor Li
     const liContainer = document.createElement("div");
     liContainer.classList.add("li-container");
     liContainer.setAttribute("data", "id");
-    
 
     //Contenedor info
     const infoContainer = document.createElement("div");
@@ -81,12 +79,9 @@ export const renderItems = (data) => {
     infoContainer.appendChild(ddCampoEstudio);
     infoContainer.appendChild(dlElement);
 
-  
-
     liElement.appendChild(infoContainer);
     liContainer.appendChild(liElement);
 
-    
     ulElement.appendChild(liContainer);
   });
 

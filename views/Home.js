@@ -32,11 +32,10 @@ export const home = () => {
   const cardsList = renderItems(dataCards);
   cardsContainer.appendChild(cardsList);
 
-
   let dataFiltrada;
   const selectFiltro = homeView.querySelector('select[name="filtro"]');
   selectFiltro.addEventListener("change", (event) => {
-   dataFiltrada = filterData(dataCards, "mainField", event.target.value);
+    dataFiltrada = filterData(dataCards, "mainField", event.target.value);
     cardsContainer.innerHTML = "";
     cardsContainer.appendChild(renderItems(dataFiltrada));
   });
@@ -48,7 +47,9 @@ export const home = () => {
     cardsContainer.appendChild(renderItems(orden));
   });
 
-  const botonBorrar = homeView.querySelector("button[data-testid='button-clear']");
+  const botonBorrar = homeView.querySelector(
+    "button[data-testid='button-clear']"
+  );
   botonBorrar.addEventListener("click", function () {
     cardsContainer.innerHTML = "";
     cardsContainer.appendChild(renderItems(data));
@@ -56,10 +57,8 @@ export const home = () => {
 
   const apiButton = homeView.querySelector("button[data-testid='button-api']");
   apiButton.addEventListener("click", function () {
-  navigateTo("/apiKey");
-
+    navigateTo("/apiKey");
   });
-
 
   return homeView;
 };
